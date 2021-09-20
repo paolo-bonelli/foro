@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@200;300;400;500;600&display=swap");
+
+:root {
+  font-size: 120%;
+  font-family: "IBM Plex Sans", sans-serif;
+  --color-principal: #d9a796;
+  --color-de-fondo: white;
+  --color-de-letra-tema: white;
+  --color-de-tema: #8c4d3f;
+  --color-de-respuestas: #d9a796;
+  --color-de-letra-principal: black;
+}
+
+body {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+header#cabecera-principal {
+  width: 100%;
+  height: 2.5em;
+  padding: 0.3em 1em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1em solid var(--color-principal);
+  background-color: var(--color-de-fondo);
+}
+
+header#cabecera-principal > * {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+header#cabecera-principal ul {
+  margin: 0%;
+  height: 100%;
+  display: flex;
+}
+
+header#cabecera-principal li {
+  padding: 0%;
+  width: 9em;
+  margin: 0% 0.5em;
+}
+
+a:-webkit-any-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+header#cabecera-principal a:-webkit-any-link {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.8em;
+  padding: 0% 1.4em;
+  font-weight: 400;
+  background-color: var(--color-principal);
+}
+
+header#cabecera-principal form {
+  display: flex;
+  align-items: center;
+  margin: 0em 2em;
+  max-width: 27em;
+}
+
+header#cabecera-principal form label {
+  height: 100%;
+  width: auto;
+  text-align: right;
+  cursor: pointer;
+  margin: 0% 0.3em;
+  display: flex;
+  align-items: center;
+}
+
+header#cabecera-principal form label img {
+  height: 77%;
+  object-fit: contain;
+}
+
+header#cabecera-principal form input[type="search"] {
+  height: 2.3em;
+  border-radius: 1.15em;
+  padding: 0.1em 1.2em;
+  width: 26em;
+  border: 1px solid var(--color-principal);
+  box-sizing: border-box;
+}
+
+header#cabecera-principal form input[type="submit"] {
+  display: none;
+}
+
+section.contenido {
+  margin-bottom: auto;
+  width: fit-content;
+  padding-top: 7vh;
+}
+
+footer {
+  min-height: 7em;
+}
+
+form.insertar {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr 3fr);
+  width: 26em;
+  grid-gap: 0.5em 2em;
+  background-image: none;
+  background-color: white;
+  border-radius: 1.3em;
+  margin: 1em 0%;
+}
+
+form.insertar input,
+form.insertar textarea {
+  height: 2em;
+  border-radius: 0.9em;
+  border-style: solid;
+  border-image: none;
+  border-color: var(--color-principal);
+  border-width: 0.2em;
+  font-size: 2.2vh;
+}
+
+form.insertar textarea {
+  height: 4em;
+}
+
+form.insertar input[type="submit"],
+form.insertar input[type="reset"] {
+  cursor: pointer;
+  height: 2.5em;
+  background-color: var(--color-principal);
+  font-weight: 600;
+  text-transform: capitalize;
+  border-radius: 1.5em;
+  border-width: 0;
+}
+div.error {
+  background-color: #f2785c;
+  padding: 0.3em 2em;
+  text-align: center;
+  border-radius: 1em;
+  font-weight: 300;
+  margin: 0.2em 0%;
+}
+
+article.tema {
+  position: relative;
+  box-sizing: border-box;
+  width: 46em;
+  max-height: 9em;
+  background-color: var(--color-de-tema);
+  color: var(--color-de-letra-tema);
+  margin: 1em 0%;
+  border-radius: 1.4em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1em 2em;
+}
+
+article#unico.tema {
+  max-height: max-content;
+}
+
+article.tema h4 {
+  margin-top: 0.5em;
+}
+
+article.tema a.tema-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  background-image: linear-gradient(
+    to top,
+    var(--color-de-tema),
+    transparent 37%
+  );
+}
+
+section#respuestas {
+  color: var(--color-de-letra-principal);
+  width: fit-content;
+  margin: 0% auto;
+  padding: 3em 7em;
+  border-radius: 2.7em;
+  background-image: none;
+  background-color: var(--color-de-fondo);
+}
+
+.respuesta {
+  margin: 0.5em 0%;
+  width: 26em;
+  border-radius: 1em;
+  background-image: none;
+  background-color: var(--color-de-respuestas);
+  padding: 1em;
+}
+
+.respuesta .info {
+  font-size: 70%;
+}
+
+.respuesta .mensaje {
+  box-sizing: border-box;
+  width: 100%;
+  height: fit-content;
+  padding: 0.2em 1em;
+  font-size: 84%;
+}
